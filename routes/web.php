@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return 'Hello Laravel';
 });
+
+Route::get('/dashboard',function(){
+	return view('admin.dashboard');
+});
+
+Route::resource('/type','TypeController');
+
+Route::resource('/room','RoomController');
