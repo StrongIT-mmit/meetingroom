@@ -19,6 +19,8 @@ class CreateRoomsTable extends Migration
             $table->text('image');
             $table->text('floor');
             $table->unsignedBigInteger('type_id');
+            $table->unsignedBigInteger('building_id');
+            $table->unsignedBigInteger('owner_id');
             $table->timestamps();
         });
     }

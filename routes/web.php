@@ -12,13 +12,15 @@
 */
 
 Route::get('/', function () {
-    return 'Hello Laravel';
+    return view('frontend.booking');
 });
 
 Route::get('/dashboard',function(){
 	return view('admin.dashboard');
-});
+})->name('adhome');
 
 Route::resource('/type','TypeController');
 
 Route::resource('/room','RoomController');
+
+Route::post('/helo','RoomController@helo')->name('helo');
