@@ -14,7 +14,7 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li> &nbsp;&nbsp;/ &nbsp;&nbsp;
               <li><i class="fa fa-laptop"></i>Room Type List</li>
             </ol>
           </div>

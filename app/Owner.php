@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Owner extends Model
+{
+    //
+    protected $fillable=[
+    	'name','email','address','phone','profile'
+    ];
+
+    public function room()
+    {
+    	return $this->hasMany('App\Room');
+    } 
+}

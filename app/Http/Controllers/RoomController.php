@@ -49,6 +49,8 @@ class RoomController extends Controller
             
             "floor" => 'required',
             "type_id" => 'required',
+            "building_id" => 'required',
+            "owner_id" => 'required',
             
         ]);
 
@@ -70,6 +72,8 @@ class RoomController extends Controller
         
         "floor"=> request('floor'),
         "type_id"=> request('type_id'),
+        "building_id"=> request('building_id'),
+        "owner_id"=> request('owner_id'),
     ]);
 
         //Redirect
@@ -119,5 +123,9 @@ class RoomController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function helo(Request $request){
+        return request('name')." AND ".request('age');
     }
 }
