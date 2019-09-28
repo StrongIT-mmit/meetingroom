@@ -39,6 +39,16 @@
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Room Type List</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('owner.index')}}">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Owner List</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('building.index')}}">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Building List</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">

@@ -16,8 +16,8 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('date');
-            $table->timestamps('start_time');
-            $table->timestamps('end_time');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('room_id');
             $table->timestamps();
@@ -34,3 +34,4 @@ class CreateBookingsTable extends Migration
         Schema::dropIfExists('bookings');
     }
 }
+

@@ -23,4 +23,8 @@ Route::resource('/type','TypeController');
 
 Route::resource('/room','RoomController');
 
+Route::resource('/owner','OwnerController');
+
+Route::resource('/building','BuildingController');
+
 Route::post('/helo','RoomController@helo')->name('helo');

@@ -16,6 +16,7 @@ class CreateBuildingsTable extends Migration
         Schema::create('buildings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->text('profile');
             $table->string('location');                      
             $table->string('township');
             $table->string('city');

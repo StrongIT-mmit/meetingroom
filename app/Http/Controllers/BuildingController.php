@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Building;
 
 class BuildingController extends Controller
 {
@@ -14,6 +15,8 @@ class BuildingController extends Controller
     public function index()
     {
         //
+        $buildings = Building::all();
+        return view('admin.building.read',compact('buildings'));
     }
 
     /**
@@ -24,6 +27,7 @@ class BuildingController extends Controller
     public function create()
     {
         //
+        return view('admin.building.create');
     }
 
     /**
@@ -35,6 +39,39 @@ class BuildingController extends Controller
     public function store(Request $request)
     {
         //
+         $request->validate([
+            "name" => 'required|min:5|max:191',
+             "location" => 'required',            
+            "township" => 'required',
+            "city" => 'required',
+            
+            
+            
+        ]);
+
+         //if file, upload
+        if ($request->hasfile('img')) {
+            $img=$request->file('img');
+            $upload_path = public_path().'/storage/img/building/';
+            $name=$img->getClientOriginalName();
+            $img->move($upload_path,$name);
+            $path = '/storage/img/building/'.$name;
+        }else{
+            $path="";
+        }   
+
+        // Create
+        Building::create([
+        "name" => request('name') ,        
+        "profile" => $path,
+        
+        "location"=> request('location'),
+        "township"=> request('township'),
+        "city"=> request('city'),
+    ]);
+
+        //Redirect
+        return redirect()->route('building.index')->with('status','Successfully Register!');
     }
 
     /**

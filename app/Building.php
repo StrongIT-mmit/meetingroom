@@ -8,7 +8,7 @@ class Building extends Model
 {
     //
     protected $fillable = [
-    	'name','location','township','city',
+    	'name','profile','location','township','city',
     ];
 
     public function room()

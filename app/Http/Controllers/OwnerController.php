@@ -39,6 +39,40 @@ class OwnerController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            "name" => 'required|min:5|max:191',
+             "email" => 'required|unique:owners',            
+            "address" => 'required',
+            "phone" => 'required',
+            
+            
+            
+        ]);
+
+        //if file, upload
+        if ($request->hasfile('img')) {
+            $img=$request->file('img');
+            $upload_path = public_path().'/storage/img/owner/';
+            $name=$img->getClientOriginalName();
+            $img->move($upload_path,$name);
+            $path = '/storage/img/owner/'.$name;
+        }else{
+            $path="";
+        }   
+
+        // Create
+        Owner::create([
+        "name" => request('name') ,        
+        
+        
+        "email"=> request('email'),
+        "address"=> request('address'),
+        "phone"=> request('phone'),
+        "profile" => $path,
+    ]);
+
+        //Redirect
+        return redirect()->route('owner.index')->with('status','Successfully Register!');
     }
 
     /**
