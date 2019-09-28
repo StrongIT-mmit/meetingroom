@@ -4,15 +4,11 @@
 
 <div class="row">
           <div class="col-lg-12">
-            <div class="row">
-                <div class="col-md-11">
-                    <h3 class="page-header"><i class="fa fa-laptop"></i>Room Types</h3>
-            
-                </div>
-                <div class="col-md-1 pt-3">
-                    <a href="{{route('type.create')}}" class="btn btn-sm btn-primary shadow-sm"> Add Type</a>
-                </div>
-            </div>
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Room Type List</h1>
+            <a href="{{route('type.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add Room Type</a>
+          </div>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li> &nbsp;&nbsp;/ &nbsp;&nbsp;
               <li><i class="fa fa-laptop"></i>Room Type List</li>

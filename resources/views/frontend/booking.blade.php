@@ -3,100 +3,136 @@
 @section('container')
 
 
+<!-- Page Content -->
 
 
-<form >
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4">Rent Room
+    <small>Book Now</small>
+  </h1>
+
+  <!-- Portfolio Item Row -->
+  <div class="row">
+
+    <div class="col-md-8">
+      <img class="img-fluid" src="http://placehold.it/750x500" alt="Calendar">
+    </div>
+
+    <div class="col-md-4">
+      <h3 class="my-3">Project Description</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+      <h3 class="my-3">Project Details</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="submit" class="btn btn-outline-secondary float-right">Book Now</button>
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+  <!-- Related Projects Row -->
+  <h3 class="my-4">Room Details</h3>
+  <div class="card shadow my-2">
+      <div class="card-body">
+        <div class="row">
+      
+          <div class="col-md-3">
+            <a href="#">
+              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat.</p>
+            
+          </div>
+          
+        </div>
+
+    </div>
+    <div class="card-footer">
+            <button class="btn btn-outline-secondary float-right">See More</button>
+          </div>
+  </div>
   
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab">Booking Form:
-    <p><select name="" id="" class="form-control">''
-      <option>Choose Room</option>
-      <option>Novotel - Class A room</option>
-      <option>Sky - Class B room</option>
-      <option>Root - Class C room</option>
-    </select></p>
-    <p><input type="date" placeholder="" oninput="this.className = ''" name="lname" class="form-control"></p>
-    <p><input type="time" placeholder="Choose Start time..." oninput="this.className = ''" name="lname" class="form-control"></p>
-    <p><input type="time" placeholder="Choose End time..." oninput="this.className = ''" name="lname" class="form-control"></p>
-  </div>
-  <div class="tab">Detail Form:
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-  </div>
-  <div class="tab">CheckOut:
-    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-  </div>
-  <div class="tab">Login Info:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-  </div>
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="helo()">Next</button>
+  <div class="card shadow my-2">
+      <div class="card-body">
+        <div class="row">
+      
+          <div class="col-md-3">
+            <a href="#">
+              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            </a>
+          </div>
+          <div class="col-md-9" style="text-align: center;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat.</p>
+            <button class="btn btn-outline-primary">See More</button>
+          </div>
+        </div>
     </div>
   </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
+
+  <div class="card shadow my-2">
+      <div class="card-body">
+        <div class="row">
+      
+          <div class="col-md-3">
+            <a href="#">
+              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat.</p>
+            <button class="btn btn-outline-dark">See More</button>
+          </div>
+        </div>
+    </div>
   </div>
-</form>
+
+  <div class="card shadow my-2">
+      <div class="card-body">
+        <div class="row">
+      
+          <div class="col-md-3">
+            <a href="#">
+              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat.</p>
+            <button class="btn btn-outline-success float-right">See More</button>
+          </div>
+        </div>
+    </div>
+  </div>
 
 @endsection
 
 @section('script')
 <script>
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
 
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-}
+
 
 function nextPrev(n) {
-  // This function will figure out which tab to display
-  // var x = document.getElementsByClassName("tab");
-  // // Exit the function if any field in the current tab is invalid:
-  // if (n == 1 && !validateForm()) return false;
-  // // Hide the current tab:
-  // x[currentTab].style.display = "none";
-  // // Increase or decrease the current tab by 1:
-  // currentTab = currentTab + n;
-  // // if you have reached the end of the form...
-  // if (currentTab >= x.length) {
-  //   // ... the form gets submitted:
-  //   document.getElementById("regForm").submit();
-  //   return false;
-  // }
-
+ 
    helo();
 
 
-
-
-
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
 }
 function helo(){
   alert('helo');
@@ -125,36 +161,6 @@ function helo(){
     });
 }
 
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
 
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
-}
 </script>
 @endsection

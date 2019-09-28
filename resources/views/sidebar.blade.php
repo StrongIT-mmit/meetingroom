@@ -3,7 +3,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <i class="fas fa-users-cog"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Admin Panel</div>
       </a>
@@ -14,7 +14,7 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="{{route('adhome')}}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fa fa-home"></i>
           <span>Home</span></a>
       </li>
 
@@ -29,55 +29,39 @@
       <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
         <a class="nav-link" href="{{route('room.index')}}">
-          <i class="fas fa-fw fa-chart-area"></i>
+          <i class="fas fa-house-damage"></i>
           <span>Room List</span></a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="{{route('type.index')}}">
-          <i class="fas fa-fw fa-chart-area"></i>
+          <i class="fas fa-bars"></i>
           <span>Room Type List</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('owner.index')}}">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Owner List</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('building.index')}}">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Building List</span></a>
-      </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+       <hr class="sidebar-divider">
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Addons
+        Other
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link" href="{{route('owner.index')}}">
+          <i class="fas fa-user-shield"></i>
+          <span>Owner List</span></a>
       </li>
 
-      <!-- Nav Item - Charts -->
+       
+
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link" href="{{route('building.index')}}">
+          <i class="far fa-building"></i>
+          <span>Building List</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
+     
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

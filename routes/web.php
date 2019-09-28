@@ -27,4 +27,4 @@ Route::resource('/owner','OwnerController');
 
 Route::resource('/building','BuildingController');
 
-Route::post('/helo','RoomController@helo')->name('helo');
+Route::post('/helo','BookingController@helo')->name('helo');

@@ -125,7 +125,5 @@ class RoomController extends Controller
         //
     }
 
-    public function helo(Request $request){
-        return request('name')." AND ".request('age');
-    }
+    
 }
