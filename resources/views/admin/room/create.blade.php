@@ -33,11 +33,31 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="o"></label>
+                    <label for="o">Type</label>
                     <select id="o" class="form-control" name="type_id">
                         @foreach($types as $type)
 
                        <option value="{{$type->id}}">{{$type->name}}</option>
+
+                       @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="o">Building</label>
+                    <select id="o" class="form-control" name="building_id">
+                        @foreach($buildings as $building)
+
+                       <option value="{{$building->id}}">{{$building->name}}</option>
+
+                       @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="o">Owner</label>
+                    <select id="o" class="form-control" name="owner_id">
+                        @foreach($owners as $owner)
+
+                       <option value="{{$owner->id}}">{{$owner->name}}</option>
 
                        @endforeach
                     </select>

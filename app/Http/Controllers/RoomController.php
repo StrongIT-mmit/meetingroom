@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Room;
 use App\Type;
+use App\Building;
+use App\Owner;
 
 class RoomController extends Controller
 {
@@ -29,8 +31,10 @@ class RoomController extends Controller
     public function create()
     {
         //
+        $buildings = Building::all();
+        $owners = Owner::all();
         $types = Type::all();
-        return view('admin.room.create',compact('types'));
+        return view('admin.room.create',compact('types','buildings','owners'));
     }
 
     /**
@@ -50,6 +54,7 @@ class RoomController extends Controller
             "floor" => 'required',
             "type_id" => 'required',
             "building_id" => 'required',
+
             "owner_id" => 'required',
             
         ]);
@@ -57,10 +62,10 @@ class RoomController extends Controller
         //if file, upload
         if ($request->hasfile('img')) {
             $img=$request->file('img');
-            $upload_path = public_path().'/storage/img/';
+            $upload_path = public_path().'/storage/img/room/';
             $name=$img->getClientOriginalName();
             $img->move($upload_path,$name);
-            $path = '/storage/img/'.$name;
+            $path = '/storage/img/room/'.$name;
         }else{
             $path="";
         }   
