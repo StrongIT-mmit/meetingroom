@@ -1,21 +1,20 @@
 <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
-
+<li class="nav-item dropdown no-arrow">
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-users-cog"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Admin Panel</div>
+      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+        <span class="mr-2 d-none d-lg-inline text-white-600 small">Valerie Luna</span>
       </a>
 
+      
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="{{route('adhome')}}">
-          <i class="fa fa-home"></i>
-          <span>Home</span></a>
+          <i class="fa fa-laptop"></i>
+          <span>Dashboard</span></a>
       </li>
 
       <!-- Divider -->
@@ -60,6 +59,29 @@
           <i class="far fa-building"></i>
           <span>Building List</span></a>
       </li>
+
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        EMail
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('owner.index')}}">
+          <i class="fas fa-user-shield"></i>
+          <span>Send Mail</span></a>
+      </li>
+
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('owner.index')}}">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span></a>
+      </li>
+
+       
+
 
      
 

@@ -25,10 +25,53 @@
     <div class="content">
       <img src="{{$a->image}}" alt="" style="width:100%; padding-bottom: 10px;" id="card">
       <h4>{{$a->name}}</h4>
-      <p>{{$a->floor}}</p>
+      <p>{{$a->type->description}}</p>
+
       
+      
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-{{ $a->id }}">
+  Details
+</button>
 
       <!-- Modal -->
+
+<div class="modal" id="myModal-{{ $a->id }}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{$a->name}}</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <img src="{{$a->image}}" class="img-fluid">
+        <div class="row">
+          <div class="col-md-6">
+          <p>Floor:</p> 
+          <p>Type Name:</p>
+          <p>Building:</p>
+          <p>Owner:</p>
+          </div>
+          <div class="col-md-6">
+          <p>{{$a->floor}}</p>
+          <p>{{$a->type->name}}</p>
+          <p>{{$a->building->name}}</p>
+          <p>{{$a->owner->name}}</p>   
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     </div>
   </div>

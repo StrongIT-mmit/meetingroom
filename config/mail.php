@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 return [
 
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'htet37871@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Hein Htet'),
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
     /*
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME','htet37871@gmail.com'),
+    'username' => env('MAIL_USERNAME'),
 
-    'password' => env('MAIL_PASSWORD','freeoflife1998323'),
+    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------
@@ -134,3 +134,4 @@ return [
     'log_channel' => env('MAIL_LOG_CHANNEL'),
 
 ];
+

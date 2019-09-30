@@ -4,6 +4,12 @@
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Room Entry Form</h1>           
     </div>
+    <ol class="breadcrumb">
+              
+              <li class="breadcrumb-item"><i class="fa fa-laptop"></i> <a href="{{route('adhome')}}">Dashboard</a></li>
+              <li class="breadcrumb-item"><i class="fas fa-door-open"></i><a href="{{route('room.index')}}">Room List</a></li>
+              <li class="breadcrumb-item active"><i class="fas fa-plus"></i>Add Room</li>
+            </ol>
     <div class="row">
     	<div class="col-md-6">
             <div class="card shadow bg-light">

@@ -11,7 +11,7 @@ class Type extends Model
     	'name','price','num_of_people','description',
     ];
 
-    public function room()
+    public function rooms()
     {
     	return $this->hasMany('App\Room');
     }

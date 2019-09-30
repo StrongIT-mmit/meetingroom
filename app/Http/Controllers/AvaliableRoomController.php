@@ -26,5 +26,6 @@ class AvaliableRoomController extends Controller
     	return view('frontend.a_room',compact('rooms','types'));
     }
 
+
     
 }

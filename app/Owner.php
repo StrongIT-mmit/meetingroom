@@ -11,7 +11,7 @@ class Owner extends Model
     	'name','email','address','phone','profile'
     ];
 
-    public function room()
+    public function rooms()
     {
     	return $this->hasMany('App\Room');
     } 

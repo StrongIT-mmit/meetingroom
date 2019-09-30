@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('frontend.home');
 })->name('home');
 
-Route::get('/dashboard', function() {
-	return view('admin.dashboard');
-})->name('adhome');
+Route::get('/dashboard', 'DashboardController@show')->name('adhome');
 
 Route::get('/avaliable_room','AvaliableRoomController@show')->name('a_room');
 
@@ -35,9 +33,10 @@ Route::resource('/building','BuildingController');
 
 Route::post('/helo','BookingController@helo')->name('helo');
 
-Route::get('/sendemail','SendEmailController@index');
+// Route::get('/sendemail','SendEmailController@index');
 
-Route::post('/sendemail/send','SendEmailController@send');
+//Route::post('/sendemail/send','SendEmailController@send');
 Auth::routes();
 
 Route::get('/userhome', 'HomeController@index')->name('userhome');
+Route::get('/sendMail', 'MailController@basic_email')->name('sendMail');

@@ -11,7 +11,7 @@ class Building extends Model
     	'name','profile','location','township','city',
     ];
 
-    public function room()
+    public function rooms()
     {
     	return $this->hasMany('App\Room');
     } 
