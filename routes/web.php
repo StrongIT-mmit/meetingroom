@@ -12,12 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('frontend.booking');
+    return view('frontend.home');
+})->name('home');
+
+Route::get('/home',function(){
+	return view('home');
 });
 
-Route::get('/dashboard',function(){
+Route::get('/dashboard', function() {
 	return view('admin.dashboard');
 })->name('adhome');
+
+Route::group(['middleware' => ['role:admin']],function(){
+Route::get('/avaliable_room','AvaliableRoomController@show')->name('a_room');
 
 Route::resource('/type','TypeController');
 
@@ -28,3 +35,11 @@ Route::resource('/owner','OwnerController');
 Route::resource('/building','BuildingController');
 
 Route::post('/helo','BookingController@helo')->name('helo');
+
+Route::get('/sendemail','SendEmailController@index');
+
+Route::post('/sendemail/send','SendEmailController@send');
+});
+Auth::routes();
+
+Route::get('/userhome', 'HomeController@index')->name('userhome');

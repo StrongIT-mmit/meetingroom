@@ -42,6 +42,26 @@
                        @endforeach
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="o"></label>
+                    <select id="o" class="form-control" name="type_id">
+                        @foreach($buildings as $building)
+
+                       <option value="{{$building->id}}">{{$building->name}}</option>
+
+                       @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="o"></label>
+                    <select id="o" class="form-control" name="type_id">
+                        @foreach($owners as $owner)
+
+                       <option value="{{$owner->id}}">{{$owner->name}}</option>
+
+                       @endforeach
+                    </select>
+                </div>
                         <input type="submit" class="btn btn-secondary" value="Save">
                     </form>       
                 </div>
