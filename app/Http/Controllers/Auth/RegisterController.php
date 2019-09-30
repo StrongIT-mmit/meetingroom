@@ -37,7 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        
     }
 
     /**
@@ -48,11 +48,20 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        //dd($data);
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+             'address' => ['required', 'string', 'max:255'],
+            
+             'phone' => ['required', 'string', 'max:255'],
+             'nrc' => ['required', 'string', 'max:255'],
+             
         ]);
+
+                
+
     }
 
     /**
@@ -63,10 +72,30 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //if file, upload
+        if ($data['profile']) {
+            $name=$data['profile'];
+            
+            
+            
+            $path = '/storage/img/user/'.$name;
+        }else{
+             $path="";
+        } 
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+             'address' => $data['address'],
+             'phone' => $data['phone'],
+             'nrc' => $data['nrc'],
+             'profile' => $path,
         ]);
+
+        $user->assignRole('user');
+
+        $user->givePermissinTo('This parts is admin not user');
+        return $user;
     }
 }

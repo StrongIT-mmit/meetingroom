@@ -10,15 +10,23 @@
 <hr>
 
 <div id="myBtnContainer">
+<<<<<<< HEAD
   <a href="{{route('a_room')}}" class="btn btn-outline-secondary">Show All</a>
   @foreach($types as $type)
   <a href="/avaliable_room/detail?id={{$type->id}}" class="btn btn-outline-secondary">{{$type->name}}</a>
 @endforeach
   
+=======
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+>>>>>>> origin/wai-hein-mr-branch
 </div>
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
+<<<<<<< HEAD
 @foreach($rooms as $a)
 
   <div class="column">
@@ -85,6 +93,73 @@
 
  @endforeach 
  
+=======
+  <div class="column nature">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="" style="width:100%">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="" style="width:100%">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="" style="width:100%">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars1.jpg" alt="" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+>>>>>>> origin/wai-hein-mr-branch
 <!-- END GRID -->
 </div>
 

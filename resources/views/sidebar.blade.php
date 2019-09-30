@@ -17,9 +17,11 @@
           <span>Dashboard</span></a>
       </li>
 
+      @hasrole('admin')
       <!-- Divider -->
       <hr class="sidebar-divider">
-
+      
+   
       <!-- Heading -->
       <div class="sidebar-heading">
         Room Description
@@ -59,6 +61,7 @@
           <i class="far fa-building"></i>
           <span>Building List</span></a>
       </li>
+<<<<<<< HEAD
 
       <hr class="sidebar-divider">
 
@@ -84,6 +87,9 @@
 
 
      
+=======
+      @endhasrole
+>>>>>>> origin/wai-hein-mr-branch
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -93,4 +99,4 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
 
-    </ul>
+</ul>

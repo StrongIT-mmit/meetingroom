@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Room;
 use DB;
+<<<<<<< HEAD
 use App\Type;
+=======
+>>>>>>> origin/wai-hein-mr-branch
 
 class AvaliableRoomController extends Controller
 {
     //
     public function show()
     {
+<<<<<<< HEAD
     	$types = Type::all();
 
     	$rooms = Room::all();
@@ -28,4 +32,11 @@ class AvaliableRoomController extends Controller
 
 
     
+=======
+    	$rooms = DB::table('rooms')->take(3)->get();
+
+    	dd($rooms);
+    	return view('frontend.a_room',compact('rooms'));
+    }
+>>>>>>> origin/wai-hein-mr-branch
 }

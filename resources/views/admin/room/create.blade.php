@@ -49,8 +49,13 @@
                     </select>
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                     <label for="o">Building</label>
                     <select id="o" class="form-control" name="building_id">
+=======
+                    <label for="o"></label>
+                    <select id="o" class="form-control" name="type_id">
+>>>>>>> origin/wai-hein-mr-branch
                         @foreach($buildings as $building)
 
                        <option value="{{$building->id}}">{{$building->name}}</option>
@@ -59,8 +64,13 @@
                     </select>
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                     <label for="o">Owner</label>
                     <select id="o" class="form-control" name="owner_id">
+=======
+                    <label for="o"></label>
+                    <select id="o" class="form-control" name="type_id">
+>>>>>>> origin/wai-hein-mr-branch
                         @foreach($owners as $owner)
 
                        <option value="{{$owner->id}}">{{$owner->name}}</option>

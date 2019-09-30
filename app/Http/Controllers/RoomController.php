@@ -46,7 +46,7 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         //
-        //dd($request);
+        dd($request);
         $request->validate([
             "name" => 'required|min:5|max:191',
              
